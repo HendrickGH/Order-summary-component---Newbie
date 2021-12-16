@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+		<title>Frontend Mentor | Order summary card</title>
+	</head>
+	<body>
+		<main class="main blur">
+			<article class="container">
+				<figure class="box-img">
+					<img
+						src="images/illustration-hero.svg"
+						alt="Enjoy your favorite music with Deezer!"
+						class="img-music"
+					/>
+				</figure>
+				<div class="box-text">
+					<header class="header">
+						<h1 class="title">Order Summary</h1>
+						<p class="text">
+							You can now listen to millions of songs, audiobooks, and podcasts
+							on any device anywhere you like!
+						</p>
+					</header>
+					<section class="section">
+						<div class="box-price">
+							<img src="images/icon-music.svg" alt="Music" class="price-img" />
+							<div class="box-price-text">
+								<p class="price-text">Annual Plan</p>
+								<p class="price">$59.99/year</p>
+							</div>
+
+							<button class="btn--change">Change</button>
+						</div>
+					</section>
+					<section class="all-btns">
+						<button class="btn btn-proceed">Proceed to Payment</button>
+						<button class="btn btn-cancel">Cancel Order</button>
+					</section>
+				</div>
+			</article>
+		</main>
+		<div class="attribution">
+			<div class="hendrick-info">
+				<button class="close">
+					<ion-icon name="close"></ion-icon>
+				</button>
+				<div class="hendrick-details">
+					<p>
+						Challenge by
+						<a
+							href="https://www.frontendmentor.io?ref=challenge"
+							target="_blank"
+						>
+							Frontend Mentor
+						</a>
+					</p>
+					<p class="hendrick">
+						Coded by
+						<a href="https://www.linkedin.com/in/hendrick-galarza/"
+							>Hendrick GH</a
+						>
+					</p>
+					<ul class="socials">
+						<li class="social">
+							<a href="https://github.com/HendrickGH"
+								><ion-icon name="logo-github"></ion-icon
+							></a>
+						</li>
+						<li class="social">
+							<a href="https://twitter.com/HendrickGalarza"
+								><ion-icon name="logo-twitter"></ion-icon
+							></a>
+						</li>
+						<li class="social">
+							<a href="tel:7721698485"><ion-icon name="call"></ion-icon></a>
+						</li>
+						<li class="social">
+							<a href="https://hendrickgh.netlify.app/"
+								><ion-icon name="globe"></ion-icon
+							></a>
+						</li>
+						<li class="social">
+							<a href="Currículum.pdf" download="cv-hendrick"
+								><ion-icon name="attach"></ion-icon
+							></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script>
+			const showContent = document.querySelector('.blur');
+			const btnClose = document.querySelector('.close');
+			const deleteModal = () => {
+				showContent.classList.remove('blur');
+				btnClose.parentElement.parentElement.remove();
+			};
+			btnClose.addEventListener('click', deleteModal);
+		</script>
+	</body>
+</html>
